@@ -60,6 +60,15 @@ swift package generate-xcodeproj
 open http-testserver.xcodeproj
 ```
 
+Make sure to select the right target, then build and run.
+
+
+## CURL
+
+```
+curl -X POST --data $'Hello World\n' http://localhost:1337/echo
+```
+
 ## Who
 
 http-testserver is brought to you by and not from the
