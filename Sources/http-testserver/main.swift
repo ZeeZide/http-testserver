@@ -1,4 +1,5 @@
 import Foundation
+import Dispatch
 import HTTP
  
 func hello(request: HTTPRequest, response: HTTPResponseWriter, 
