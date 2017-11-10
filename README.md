@@ -7,6 +7,7 @@ Simple Test Server using the Async Swift Server API
 
 - [Swift Server Project HTTP APIs](https://github.com/swift-server/http)
 - [Async GCD Server Fork](https://github.com/ZeeZide/http/tree/feature/gcd-async-server) used here
+- Tutorial: [Using the Swift Server API 0.1.0](http://www.alwaysrightinstitute.com/http-010/)
 
 ## Setup
 
@@ -51,9 +52,13 @@ docker run -p 1337:1337 -d --name async-swift --rm \
    /buildit/.build/x86_64-unknown-linux/debug/http-testserver
 ```
 
-## Tutorial
 
-- [Using the Swift Server API 0.1.0](http://www.alwaysrightinstitute.com/http-010/)
+## Xcode
+
+```
+swift package generate-xcodeproj
+open http-testserver.xcodeproj
+```
 
 ## Who
 
