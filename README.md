@@ -5,7 +5,35 @@
 
 Simple Test Server using the Async Swift Server API
 
-### Who
+## Setup
+
+```
+git clone https://github.com/ZeeZide/http-testserver.git
+cd http-testserver
+
+swift build
+  Fetching https://github.com/ZeeZide/http.git
+  Cloning https://github.com/ZeeZide/http.git
+  Resolving https://github.com/ZeeZide/http.git at feature/gcd-async-server
+  Compile CHTTPParser http_parser.c
+  Compile Swift Module 'HTTP' (9 sources)
+  Compile Swift Module 'http_testserver' (1 sources)
+  Linking ./.build/x86_64-apple-macosx10.10/debug/http-testserver
+
+./.build/x86_64-apple-macosx10.10/debug/http-testserver
+  Starting server on: http://localhost:1337/
+```
+
+Server pages:
+
+- [http://localhost:1337/](http://localhost:1337/)
+
+## Tutorial
+
+- [Using the Swift Server API 0.1.0](http://www.alwaysrightinstitute.com/http-010/)
+  - including hosting the stuff in Apache
+
+## Who
 
 http-testserver is brought to you by
 [ZeeZide](http://zeezide.de).
