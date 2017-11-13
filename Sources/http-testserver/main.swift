@@ -144,9 +144,9 @@ let server = HTTPServer()
 do {
     print("Starting server on: http://localhost:1337/")
     try server.start(port: 1337) { request, response, queue in
-        for route in routes {
-            if request.target.starts(with: route.0) {
-                return route.1(request, response, queue)
+        for ( pathPrefix, handler ) in routes {
+            if request.target.starts(with: pathPrefix) {
+                return handler(request, response, queue)
             }
         }
       
