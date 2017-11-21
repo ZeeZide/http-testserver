@@ -7,7 +7,7 @@ let package = Package(
     name: "http-testserver",
     dependencies: [
         .package(url: "https://github.com/ZeeZide/http.git",
-                 .branch("feature/gcd-async-server-swift3compat"))
+                 .branch("feature/gcd-async-server-swift3"))
     ],
     targets: [
         .target(
