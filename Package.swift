@@ -3,17 +3,11 @@
 
 import PackageDescription
 
-#if os(Linux)
-  let branch = "feature/gcd-async-server-swift3compat"
-#else
-  let branch = "feature/gcd-async-server"
-#endif
-
 let package = Package(
     name: "http-testserver",
     dependencies: [
         .package(url: "https://github.com/ZeeZide/http.git",
-                 .branch(branch))
+                 .branch("feature/gcd-async-server-swift3compat"))
     ],
     targets: [
         .target(
