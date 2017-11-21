@@ -30,13 +30,11 @@ func hello(request: HTTPRequest, response: HTTPResponseWriter,
     }.joined(separator: " / ")
   
     response.writeBody(
-        """
-        <h1>Hello Async Server Swift</h1>
-        <h3>Routes</h3>
-        <ul>\(localLinks)</ul>
-        <hr />
-        <center>\(remoteLinks)</center>
-        """
+        "<h1>Hello Async Server Swift</h1>" +
+        "<h3>Routes</h3>" +
+        "<ul>\(localLinks)</ul>" +
+        "<hr />" +
+        "<center>\(remoteLinks)</center>"
     )
     response.done()
     return .discardBody
@@ -117,10 +115,8 @@ func slow(request: HTTPRequest, response: HTTPResponseWriter,
         let endDate = Date()
         response.writeHeader(status: .ok)
         response.writeBody(
-            """
-            started:  \(startDate)\n
-            finished: \(endDate)\n
-            """
+            "started:  \(startDate)\n" +
+            "finished: \(endDate)\n"
         )
         response.done()
     }
