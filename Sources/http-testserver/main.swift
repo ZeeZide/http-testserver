@@ -141,7 +141,7 @@ do {
     print("Starting server on: http://localhost:1337/")
     try server.start(port: 1337) { request, response, queue in
         for ( pathPrefix, handler ) in routes {
-            if request.target.starts(with: pathPrefix) {
+            if request.target.hasPrefix(pathPrefix) {
                 return handler(request, response, queue)
             }
         }
